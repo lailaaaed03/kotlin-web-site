@@ -1,10 +1,10 @@
 [//]: # (title: Hello world)
 
-Below is a simple program that prints "Hello, world!!!".
+Below is a simple program that prints "Hello, world!":
 
 ```kotlin
 fun main() {
-    println("Hello, world!!!")
+    println("Hello, world!")
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="hello-world-kotlin"}
@@ -40,19 +40,38 @@ fun main() {
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="variables-kotlin"}
 
+> Variables can be declared at top level as well as within functions.
+{type="info"}
+
 As `customers` is a mutable variable, its value can be reassigned after declaration.
 
 > We recommend that you declare all variables as read-only (`val`) by default. Declare mutable variables (`var`) only if 
 > necessary.
 {type="info"}
 
-You'll notice that we haven't declared any types for our variables. Kotlin has inferred the type for us: `Integer`. We'll cover
+You'll notice that we haven't declared any types for our variables. Kotlin has inferred the type for us: `Int`. We'll cover
 the different Kotlin types and how to declare them in the next chapter.
 
+## Practice
+
 <deflist collapsible="true">
-    <def title="Practice tasks">
+    <def title="Exercise 1">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
     </def>
 </deflist>
 
-**Next:** [Basic types](kotlin-tour-basic-types.md)
+<deflist collapsible="true">
+    <def title="Hint">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    </def>
+</deflist>
+
+```kotlin
+    fun main() {
+        println("Hello, world!")
+    }
+```
+{initial-collapse-state="collapsed" collapsed-title="Example solution"}
+
+## Next
+[Learn about Kotlin basic types](kotlin-tour-types.md)

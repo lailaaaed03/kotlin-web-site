@@ -13,7 +13,8 @@
 
     <toc-element toc-title="Take Kotlin tour" id="kotlin-tour-welcome.md">
         <toc-element id="kotlin-tour-hello-world.md" hidden="true"/>
-        <toc-element id="kotlin-tour-basic-types.md" hidden="true"/>
+        <toc-element id="kotlin-tour-types.md" hidden="true"/>
+        <toc-element id="kotlin-tour-control-flow.md" hidden="true"/>
     </toc-element>
 
     <toc-element toc-title="Kotlin overview">
