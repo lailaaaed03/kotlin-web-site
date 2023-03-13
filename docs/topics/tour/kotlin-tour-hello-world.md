@@ -1,5 +1,10 @@
 [//]: # (title: Hello world)
 
+<microformat>
+    <p>This is the first part of the <strong>First steps</strong> Kotlin tour:</p>
+    <p><img src="icon-1.svg" width="20" alt="First step"/> <strong>Hello world</strong><br/><img src="icon-2-todo.svg" width="20" alt="Second step"/> Basic types<br/><img src="icon-3-todo.svg" width="20" alt="Third step"/> Control flow<br/><img src="icon-4-todo.svg" width="20" alt="Fourth step"/> Functions<br/><img src="icon-5-todo.svg" width="20" alt="Fifth step"/> Classes</p>
+</microformat>
+
 Below is a simple program that prints "Hello, world!":
 
 ```kotlin
@@ -22,7 +27,7 @@ We'll discuss functions more in a couple of chapters.
 
 All programs need to be able to store data and variables help you to do just that. In Kotlin, you can declare:
 * read-only variables with `val`
-* <tooltip tooltip="mutable"> mutable </tooltip> variables with `var`
+* mutable variables with `var`
 
 To assign a value, use the assignment operator `=`.
 

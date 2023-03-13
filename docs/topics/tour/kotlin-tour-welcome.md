@@ -6,8 +6,12 @@ browser. There is no installation required.
 If you have prior programming experience, then this is the tour for you! 
 
 If this is your first time programming, 
-don't be shy, give it a try! If it's too much, there's also our [Atomic Kotlin book](https://www.atomickotlin.com/atomickotlin/), or you can sign up for the free 
+you can also take this tour. If it's too much, there's also our [Atomic Kotlin book](https://www.atomickotlin.com/atomickotlin/), or you can sign up for the free 
 [Kotlin Basics track](https://hyperskill.org/join/fromdocstoJetSalesStat?redirect=true&next=/tracks/18&_ga=2.188185836.573451406.1677484774-1946832840.1674489864&_gl=1*7uquxx*_ga*MTk0NjgzMjg0MC4xNjc0NDg5ODY0*_ga_9J976DJZ68*MTY3NzU5NTk0OS4xMTAuMS4xNjc3NTk1OTUxLjU4LjAuMA..) on JetBrains Academy.
+
+Each chapter in our tutorial contains a practice section, containing exercises that test your understanding of what
+you have just learned. We recommend that you complete these exercises in [Kotlin Playground](https://play.kotlinlang.org).
+Example solutions are provided for each exercise.
 
 Ready to go? Then pick the starting point that suits you.
 
