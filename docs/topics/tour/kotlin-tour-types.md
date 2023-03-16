@@ -1,8 +1,8 @@
 [//]: # (title: Basic types)
 
 <microformat>
-    <p>This is the second part of the <strong>First steps</strong> Kotlin tour.</p>
-    <p><img src="icon-1-done.svg" width="20" alt="First step"/> <a href="kotlin-tour-hello-world.md">Hello world</a><br/><img src="icon-2.svg" width="20" alt="Second step"/> <strong>Basic types</strong><br/><img src="icon-3-todo.svg" width="20" alt="Third step"/> Control flow<br/><img src="icon-4-todo.svg" width="20" alt="Fourth step"/> Functions<br/><img src="icon-5-todo.svg" width="20" alt="Fifth step"/> Classes</p>
+    <p>This is the second part of the <strong>Beginner</strong> Kotlin tour.</p>
+    <p><img src="icon-1-done.svg" width="20" alt="First step"/> <a href="kotlin-tour-hello-world.md">Hello world</a><br/><img src="icon-2.svg" width="20" alt="Second step"/> <strong>Basic types</strong><br/><img src="icon-3-todo.svg" width="20" alt="Third step"/> <a href="kotlin-tour-control-flow.md">Control flow</a><br/><img src="icon-4-todo.svg" width="20" alt="Fourth step"/> <a href="kotlin-tour-functions.md">Functions</a><br/><img src="icon-5-todo.svg" width="20" alt="Fifth step"/> <a href="kotlin-tour-classes-part-1.md">Classes</a></p>
 </microformat>
 
 In Kotlin, we have data types that tell the compiler what functions and properties an object has.

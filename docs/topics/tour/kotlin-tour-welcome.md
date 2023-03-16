@@ -1,13 +1,7 @@
 [//]: # (title: Welcome to our tour of Kotlin!)
 
 This tour covers the fundamentals of the Kotlin programming language and can be completed entirely within your 
-browser. There is no installation required. 
-
-If you have prior programming experience, then this is the tour for you! 
-
-If this is your first time programming, 
-you can also take this tour. If it's too much, there's also our [Atomic Kotlin book](https://www.atomickotlin.com/atomickotlin/), or you can sign up for the free 
-[Kotlin Basics track](https://hyperskill.org/join/fromdocstoJetSalesStat?redirect=true&next=/tracks/18&_ga=2.188185836.573451406.1677484774-1946832840.1674489864&_gl=1*7uquxx*_ga*MTk0NjgzMjg0MC4xNjc0NDg5ODY0*_ga_9J976DJZ68*MTY3NzU5NTk0OS4xMTAuMS4xNjc3NTk1OTUxLjU4LjAuMA..) on JetBrains Academy.
+browser. There is no installation required.
 
 Each chapter in our tutorial contains a practice section, containing exercises that test your understanding of what
 you have just learned. We recommend that you complete these exercises in [Kotlin Playground](https://play.kotlinlang.org).
@@ -15,16 +9,17 @@ Example solutions are provided for each exercise.
 
 Ready to go? Then pick the starting point that suits you.
 
-## First steps
-[First steps](kotlin-tour-hello-world.md)
+## Beginner
+[Beginner tour](kotlin-tour-hello-world.md)
 
 Take your first steps with Kotlin and learn about:
-* Variables
-* Basic types
-* Control flow
-* Functions
-* Classes
+* [Variables](kotlin-tour-hello-world.md)
+* [Basic types](kotlin-tour-types.md)
+* [Control flow](kotlin-tour-control-flow.md)
+* [Functions](kotlin-tour-functions.md)
+* [Classes](kotlin-tour-classes-part-1.md)
 
+<!---
 ## Intermediate
 <u>Intermediate</u>
 
@@ -43,5 +38,6 @@ Ready for the next level? Learn about:
 To use Kotlin to its maximum potential, learn about:
 * Generics
 * Coroutines
+-->
 
-**Next:** [First steps](kotlin-tour-hello-world.md)
+**Next:** [Beginner tour](kotlin-tour-hello-world.md)

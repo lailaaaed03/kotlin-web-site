@@ -1,8 +1,8 @@
 [//]: # (title: Hello world)
 
 <microformat>
-    <p>This is the first part of the <strong>First steps</strong> Kotlin tour:</p>
-    <p><img src="icon-1.svg" width="20" alt="First step"/> <strong>Hello world</strong><br/><img src="icon-2-todo.svg" width="20" alt="Second step"/> Basic types<br/><img src="icon-3-todo.svg" width="20" alt="Third step"/> Control flow<br/><img src="icon-4-todo.svg" width="20" alt="Fourth step"/> Functions<br/><img src="icon-5-todo.svg" width="20" alt="Fifth step"/> Classes</p>
+    <p>This is the first part of the <strong>Beginner</strong> Kotlin tour:</p>
+    <p><img src="icon-1.svg" width="20" alt="First step"/> <strong>Hello world</strong><br/><img src="icon-2-todo.svg" width="20" alt="Second step"/> <a href="kotlin-tour-types.md">Basic types</a><br/><img src="icon-3-todo.svg" width="20" alt="Third step"/> <a href="kotlin-tour-control-flow.md">Control flow</a><br/><img src="icon-4-todo.svg" width="20" alt="Fourth step"/> <a href="kotlin-tour-functions.md">Functions</a><br/><img src="icon-5-todo.svg" width="20" alt="Fifth step"/> <a href="kotlin-tour-classes-part-1.md">Classes</a></p>
 </microformat>
 
 Below is a simple program that prints "Hello, world!":

@@ -1,7 +1,7 @@
 [//]: # (title: Classes I)
 
 <microformat>
-    <p>This is final part of the <strong>First steps</strong> Kotlin tour.</p>
+    <p>This is the final part of the <strong>Beginner</strong> Kotlin tour.</p>
     <p><img src="icon-1-done.svg" width="20" alt="First step"/> <a href="kotlin-tour-hello-world.md">Hello world</a><br/><img src="icon-2-done.svg" width="20" alt="Second step"/> <a href="kotlin-tour-types.md">Basic types</a><br/><img src="icon-3-done.svg" width="20" alt="Third step"/> <a href="kotlin-tour-control-flow.md">Control flow</a><br/><img src="icon-4-done.svg" width="20" alt="Fourth step"/> <a href="kotlin-tour-functions.md">Functions</a><br/><img src="icon-5.svg" width="20" alt="Fifth step"/> <strong>Classes</strong></p>
 </microformat>
 

@@ -1,8 +1,8 @@
 [//]: # (title: Control flow)
 
 <microformat>
-    <p>This is the third part of the <strong>First steps</strong> Kotlin tour.</p>
-    <p><img src="icon-1-done.svg" width="20" alt="First step"/> <a href="kotlin-tour-hello-world.md">Hello world</a><br/><img src="icon-2-done.svg" width="20" alt="Second step"/> <a href="kotlin-tour-types.md">Basic types</a><br/><img src="icon-3.svg" width="20" alt="Third step"/> <strong>Control flow</strong><br/><img src="icon-4-todo.svg" width="20" alt="Fourth step"/> Functions<br/><img src="icon-5-todo.svg" width="20" alt="Fifth step"/> Classes</p>
+    <p>This is the third part of the <strong>Beginner</strong> Kotlin tour.</p>
+    <p><img src="icon-1-done.svg" width="20" alt="First step"/> <a href="kotlin-tour-hello-world.md">Hello world</a><br/><img src="icon-2-done.svg" width="20" alt="Second step"/> <a href="kotlin-tour-types.md">Basic types</a><br/><img src="icon-3.svg" width="20" alt="Third step"/> <strong>Control flow</strong><br/><img src="icon-4-todo.svg" width="20" alt="Fourth step"/> <a href="kotlin-tour-functions.md">Functions</a><br/><img src="icon-5-todo.svg" width="20" alt="Fifth step"/> <a href="kotlin-tour-classes-part-1.md">Classes</a></p>
 </microformat>
 
 Like other programming languages, Kotlin has tools for checking conditional expressions and creating loops.

@@ -1,4 +1,4 @@
-[//]: # (title: First steps wrap up)
+[//]: # (title: Beginner wrap up)
 
 Congratulations! Now that you have completed our Kotlin first steps tour, here are some suggested next steps for your Kotlin journey.
 
