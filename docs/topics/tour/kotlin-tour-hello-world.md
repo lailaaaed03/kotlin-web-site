@@ -59,21 +59,19 @@ the different Kotlin types and how to declare them in the next chapter.
 
 ## Practice
 
-<deflist collapsible="true">
-    <def title="Exercise 1">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    </def>
-</deflist>
-
-<deflist collapsible="true">
-    <def title="Hint">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    </def>
-</deflist>
-
+### Exercise 1 {initial-collapse-state="collapsed"}
+Complete the code below to make the function print `"OK"` to standard output. Test your code in [Playground](https://play.kotlinlang.org).
 ```kotlin
     fun main() {
-        println("Hello, world!")
+        TODO()
+    }
+```
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" validate="false"}
+
+|---|---|
+```kotlin
+    fun main() {
+        println("OK")
     }
 ```
 {initial-collapse-state="collapsed" collapsed-title="Example solution"}
