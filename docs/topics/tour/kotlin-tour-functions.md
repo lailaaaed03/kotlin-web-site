@@ -5,17 +5,21 @@
     <p><img src="icon-1-done.svg" width="20" alt="First step"/> <a href="kotlin-tour-hello-world.md">Hello world</a><br/><img src="icon-2-done.svg" width="20" alt="Second step"/> <a href="kotlin-tour-types.md">Basic types</a><br/><img src="icon-3-done.svg" width="20" alt="Third step"/> <a href="kotlin-tour-control-flow.md">Control flow</a><br/><img src="icon-4.svg" width="20" alt="Fourth step"/> <strong>Functions</strong><br/><img src="icon-5-todo.svg" width="20" alt="Fifth step"/> <a href="kotlin-tour-classes-part-1.md">Classes</a></p>
 </microformat>
 
-You can declare your own functions in Kotlin using the `fun` keyword. Add parameters within parentheses `()` using Pascal
-notation - _name: type_. You must declare a type for each parameter and multiple parameters must be separated by commas.
-You also need to declare the return type of your function, separated by a colon `:` after the function's parentheses `()`.
-Add any code that you want to be executed as part of your function inside curly brackets `{}`. Use the `return` keyword
-to exit or return an object from a function.
+You can declare your own functions in Kotlin using the `fun` keyword. 
+
+In Kotlin:
+* function parameters are written within parentheses `()` using Pascal
+notation - _name: type_.
+* you must declare a type for each parameter and multiple parameters must be separated by commas.
+* the return type is written after the function's parentheses `()`, separated by a colon `:`.
+* the body of a function is written within curly brackets {}.
+* the `return` keyword is used to exit or return a data structure from a function.
 
 In the below example:
-* `x` and `y` are function parameters
-* `x` and `y` have type `Int`
-* the function's return type is `Int`
-* the function returns a sum of `x` and `y` when called
+* `x` and `y` are function parameters.
+* `x` and `y` have type `Int`.
+* the function's return type is `Int`.
+* the function returns a sum of `x` and `y` when called.
 
 ```kotlin
 fun sum(x: Int, y: Int): Int {
