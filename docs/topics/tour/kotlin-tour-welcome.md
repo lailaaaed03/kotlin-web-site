@@ -9,15 +9,14 @@ Example solutions are provided for each exercise.
 
 Ready to go? Then pick the starting point that suits you.
 
-## Beginner
-[Beginner tour](kotlin-tour-hello-world.md)
-
 Take your first steps with Kotlin and learn about:
 * [Variables](kotlin-tour-hello-world.md)
 * [Basic types](kotlin-tour-types.md)
 * [Control flow](kotlin-tour-control-flow.md)
 * [Functions](kotlin-tour-functions.md)
 * [Classes](kotlin-tour-classes-part-1.md)
+
+<a href="kotlin-tour-hello-world.md"><img src="start-kotlin-tour.svg" width="500" alt="Start the Kotlin tour"/></a>
 
 <!---
 ## Intermediate
@@ -39,5 +38,3 @@ To use Kotlin to its maximum potential, learn about:
 * Generics
 * Coroutines
 -->
-
-**Next:** [Beginner tour](kotlin-tour-hello-world.md)
