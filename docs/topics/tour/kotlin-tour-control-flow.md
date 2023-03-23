@@ -13,7 +13,7 @@ Kotlin provides `if` and `when` for checking conditional expressions.
 
 ### If
 
-To use `if`, add the conditional expression within parentheses and the action to take if the result is true within curly brackets `{}`:
+To use `if`, add the conditional expression within parentheses and the action to take if the result is true within curly braces `{}`:
 
 ```kotlin
 fun main() { 
@@ -34,7 +34,7 @@ fun main() {
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-if-kotlin"}
 
 There is no ternary operator `condition ? then : else` in Kotlin. Instead, `if` can be used as an expression. When using
-`if` as an expression, there are no curly brackets `{}`:
+`if` as an expression, there are no curly braces `{}`:
 
 ```kotlin
 fun main() { 
@@ -54,7 +54,7 @@ Use `when` when you have a conditional expression with multiple branches.
 `when` can be used either as a statement or as an expression.
 
 Below is an example of using `when` as a statement. Again, place the conditional expression within parentheses and the actions to take
-within curly brackets `{}`. Use `->` in each branch to separate each condition from each action.
+within curly braces `{}`. Use `->` in each branch to separate each condition from each action.
 
 ```kotlin
 fun main() {    
@@ -117,7 +117,7 @@ The two most common loop structures in programming are `for` and `while`. `for` 
 
 Using our new knowledge of ranges, we can create a `for` loop that iterates over numbers 1 to 5 and prints the number each time.
 
-Place the iterator and range within parentheses `()` with keyword `in`. Add the action you want to complete within curly brackets `{}`.
+Place the iterator and range within parentheses `()` with keyword `in`. Add the action you want to complete within curly braces `{}`.
 
 ```kotlin
 fun main() {
@@ -136,7 +136,7 @@ fun main() {
 
 In the first use case (`while`):
 * Declare the conditional expression for your while loop to continue within parentheses `()`. 
-* Add the action you want to complete within curly brackets `{}`.
+* Add the action you want to complete within curly braces `{}`.
 
 > In the below examples, we use the [increment operator](operator-overloading.md#increments-and-decrements) `++` to
 > increment the value of our `cakesEaten` variable.
@@ -155,7 +155,7 @@ fun main() {
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-while-loop-kotlin"}
 
 In the second use case (`do-while`):
-* Define the action you want to complete within curly brackets `{}` with the keyword `do`.
+* Define the action you want to complete within curly braces `{}` with the keyword `do`.
 * Declare the conditional expression for your while loop to continue within parentheses `()`.
 
 ```kotlin

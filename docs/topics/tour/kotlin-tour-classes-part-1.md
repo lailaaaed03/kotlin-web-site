@@ -23,7 +23,7 @@ properties for a class:
 ```kotlin
 class Contact(val id: Int, var email: String)
 ```
-* Within the class body defined by curly brackets `{}`.
+* Within the class body defined by curly braces `{}`.
 ```kotlin
 class Contact(val id: Int, var email: String) {
     val category: String
@@ -80,6 +80,7 @@ fun main() {
     println(contact.email)           //Prints the new value of the property: email
 }
 ```
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-access-property-kotlin"}
 
 ## Member functions
 In addition to declaring properties as part of an object's characteristics, you can also define an object's behavior 
@@ -100,6 +101,7 @@ fun main() {
     contact.printId()           //Calls member function printId() that prints 1
 }
 ```
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-member-function-kotlin"}
 
 ## Inheritance
 By default, you can't inherit a class from another class. To allow class inheritance for a class, use the `open`
@@ -124,11 +126,27 @@ fun main() {
     val siberianTiger = SiberianTiger() //Creates instance of class SiberianTiger
 }
 ```
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-inheritance-kotlin"}
 
 > Note that when creating an instance of `SiberianTiger`, no parameters are needed in the constructor. The `origin`
 > is automatically set to `"Siberia"`.
 >
 {type="note"}
+
+It's only possible to inherit from one class at a time. Kotlin doesn't support multiple inheritance, where you inherit
+from two classes at the same time.
+
+```kotlin
+open class Sheep                //Class Sheep can be inherited from
+open class Dog                  //Class Dog can be inherited from
+open class Yorkshire : Dog()    //Class Yorkshire inherits from class Dog
+open class Yorkie : Yorkshire() //Class Yorkie inherits from class Yorkshire
+
+// class Sheepdog : Sheep() : Dog() //You can't create a class that inherits from both class Sheep and class Dog
+```
+
+By default, if no parent class is declared, your class inherits from the [`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/) class.
+The `Any` class is at the root of the Kotlin class hierarchy.
 
 ### Override member functions
 
@@ -158,6 +176,11 @@ fun main() {
     yorkshire.sayHello()         //Prints "wif wif!"
 }
 ```
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-override-member-function-kotlin"}
+
+> Note that if you override a member function, the function that you override it with is automatically inheritable.
+>
+{type="note"}
 
 ### Override properties
 
@@ -177,21 +200,47 @@ fun main() {
     println(yorkshire.bark)        //Prints "wif wif!"
 }
 ```
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-override-property-kotlin"}
 
 For more information, see [Inheritance](inheritance.md).
 
 ## Extensions
+
 Sometimes it's not possible to inherit from a class. For example, if you are using a function from a third-party
-library. Instead, you can write new functions to extend the class. You can also do the same for properties.
+library. Instead, you can write new functions to extend the class.
 
 ### Extension functions
 
+The syntax for declaring extension functions is very similar to declaring a normal function. They key difference is that
+you need to write the name of the class that you want to extend followed by a period `.` before your function name.
 
-### Extension properties
+> The class to be extended is called the **receiver type**. Every extension function must have a receiver type.
+>
+{type="tip"}
+
+```kotlin
+class Contact(val id: Int, var email: String) {
+    fun printId() {
+        println(id)
+    }
+}
+
+fun Contact.getInfo() = "$id $email" //Extension function for class Contact
+
+fun main() {
+    val contact = Contact(1, "mary@gmail.com")
+    contact.printId()           //Calls member function printId() that prints 1
+    print(client.getInfo())     //Calls print() on extension function getInfo()
+}
+```
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-extension-function-kotlin"}
+
+> Note, it's not possible to override an extension function. If the class has a member function that has the same
+> signature as an extension function, the member function always takes precedence.
+>
+{type="note"}
 
 For more information, see [Extensions](extensions.md).
-
-## Any type
 
 ## Practice
 

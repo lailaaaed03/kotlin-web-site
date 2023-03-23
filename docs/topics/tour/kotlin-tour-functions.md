@@ -12,7 +12,7 @@ In Kotlin:
 notation - _name: type_.
 * you must declare a type for each parameter and multiple parameters must be separated by commas.
 * the return type is written after the function's parentheses `()`, separated by a colon `:`.
-* the body of a function is written within curly brackets {}.
+* the body of a function is written within curly braces {}.
 * the `return` keyword is used to exit or return a data structure from a function.
 
 In the below example:
@@ -134,6 +134,102 @@ fun main() {
 > is `Unit`.
 > 
 {type="note"}
+
+## Lambda expressions
+
+Kotlin allows you to write even more concise code for functions by using lambda expressions.
+
+For example, the below function:
+
+```kotlin
+fun uppercaseString(string: String): String {
+    return string.uppercase()
+}
+
+fun main() {
+    val upperCase = uppercaseString("hello")  
+}
+```
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-lambda-before-kotlin"}
+
+Can also be written as:
+```kotlin
+val upperCase = { string: String -> string.uppercase() }
+
+fun main() {
+    println(upperCase("hello"))
+}
+```
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-lambda-after-kotlin"}
+
+You store a lambda expression in a variable by using the assignment operator (`=`). The lambda expression itself is
+written within curly braces `{}`.
+
+Within the lambda expression, you write:
+* the parameters followed by an `->`.
+* the function body after the `->`.
+
+> If you declare a lambda without parameters, then there is no need to use `->`.
+>
+{type="note"}
+
+### Function types
+
+In the previous example, Kotlin's type inference inferred the type of `upperCase` from the parameter type. 
+But there may be times when you need to explicitly specify the parameter and return type. 
+Kotlin has **function types** for this purpose.
+
+The syntax for a function type has:
+* the parameters' types written within parentheses and separated by commas.
+* the return type written after `->`.
+
+For example: `(String) -> String`
+
+This is what a lambda expression looks like if we define the function type for `upperCase`:
+
+```kotlin
+val upperCase: (String) -> String = { string -> string.uppercase() }
+
+fun main() {
+    println(upperCase("hello"))
+}
+```
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-lambda-function-type-kotlin"}
+
+If your lambda has no parameters then the parentheses are left empty. For example: `() -> Unit`
+
+> You must declare parameter and return types either in the lambda expression or as a function type. Otherwise, the
+> compiler won't be able to know what type your variable is.
+> 
+> For example, the below won't work:
+> 
+> `val upperCase = { str -> str.uppercase() }`
+>
+{type="note"}
+
+For more information on lambda expressions, see [Lambda expressions and anonymous functions](lambdas.md#lambda-expressions-and-anonymous-functions).
+
+<!---
+
+## Anonymous functions
+
+Maybe?
+
+## Higher-order functions
+
+In Kotlin, functions can be used as a data type and stored in data structures such as variables. This means that we can
+use functions as function parameters and return them from other functions.
+
+A higher-order function is a function that takes another function as a parameter and/or returns a function.
+
+For example:
+
+```kotlin
+fun calculate(x: Int, y: Int, operation: (Int, Int) -> Int): Int {
+    return operation(x, y)
+}
+```
+-->
 
 ## Practice
 

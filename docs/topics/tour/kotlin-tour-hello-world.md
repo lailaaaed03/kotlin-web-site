@@ -18,7 +18,7 @@ In Kotlin:
 * `fun` is used to declare a function
 * the entry point is the `main` function
 * function arguments are written within parentheses `()`
-* the body of a function is written within curly brackets `{}`
+* the body of a function is written within curly braces `{}`
 * [`println()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/println.html) and [`print()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/print.html) functions print their arguments to standard output
 
 We'll discuss functions more in a couple of chapters.

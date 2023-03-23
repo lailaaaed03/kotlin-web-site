@@ -33,4 +33,4 @@ Congratulations! Now that you have completed our Kotlin first steps tour, here a
 {type=note}
 
 ### Back
-[Learn about classes](kotlin-tour-classes-part-1.md)
+[Learn about null safety](kotlin-tour-null-safety.md)
