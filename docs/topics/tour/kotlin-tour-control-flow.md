@@ -9,7 +9,8 @@ Like other programming languages, Kotlin has tools for checking conditional expr
 
 ## Conditional expressions
 
-Kotlin provides `if` and `when` for checking conditional expressions.
+Kotlin provides `if` and `when` for checking conditional expressions. If you have to choose between the two, we recommend
+using `when` as it leads to more robust and safer programs.
 
 ### If
 

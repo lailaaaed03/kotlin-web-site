@@ -54,6 +54,25 @@ As `customers` is a mutable variable, its value can be reassigned after declarat
 > necessary.
 {type="info"}
 
+## String templates
+
+A string value is a sequence of characters in double quotes (`"`). You can use template expressions to access data stored
+in variables and other objects, and convert them into a string. Template expressions start with a dollar sign (`$`).
+For example:
+
+```kotlin
+fun main() { 
+//sampleStart
+    val customers = 10
+    println("There are $customers customers")
+    //There are 10 customers
+//sampleEnd
+}
+```
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="string-templates-kotlin"}
+
+For more information, see [String templates](strings.md).
+
 You'll notice that we haven't declared any types for our variables. Kotlin has inferred the type for us: `Int`. We'll cover
 the different Kotlin types and how to declare them in the next chapter.
 
