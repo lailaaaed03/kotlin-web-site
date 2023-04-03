@@ -12,9 +12,11 @@ Ready to go? Then pick the starting point that suits you.
 Take your first steps with Kotlin and learn about:
 * [Variables](kotlin-tour-hello-world.md)
 * [Basic types](kotlin-tour-types.md)
+* [Collections](kotlin-tour-collections.md)
 * [Control flow](kotlin-tour-control-flow.md)
 * [Functions](kotlin-tour-functions.md)
 * [Classes](kotlin-tour-classes-part-1.md)
+* [Null safety](kotlin-tour-null-safety.md)
 
 <a href="kotlin-tour-hello-world.md"><img src="start-kotlin-tour.svg" width="500" alt="Start the Kotlin tour"/></a>
 
@@ -24,12 +26,8 @@ Take your first steps with Kotlin and learn about:
 
 Ready for the next level? Learn about:
 * Interfaces
-* Data classes
 * Companion objects
 * Nested classes
-* Collections
-* Null safety
-* Lambdas
 
 ## Advanced
 <u>Advanced</u>
