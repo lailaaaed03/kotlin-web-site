@@ -289,17 +289,16 @@ When the operands `a` and `b` are statically known to be `Float` or `Double` or 
 declared or inferred or is a result of a [smart cast](typecasts.md#smart-casts)), the operations on the
 numbers and the range that they form follow the [IEEE 754 Standard for Floating-Point Arithmetic](https://en.wikipedia.org/wiki/IEEE_754).
 
-When the operands are **not** statically typed as floating point numbers (for example, `Any`, `Comparable<...>`, a type 
-parameter), these operations behave differently. In this case, the operations use the `equals` and `compareTo` 
-implementations for `Float` and `Double`. As a result:
+However, to support generic use cases and provide total ordering, the behavior is different for operands that are **not**
+statically typed as floating point numbers. For example, `Any`, `Comparable<...>`, or `Collection<T>` types. In this case, the 
+operations use the `equals` and `compareTo` implementations for `Float` and `Double`. As a result:
 
 * `NaN` is considered equal to itself
 * `NaN` is considered greater than any other element including `POSITIVE_INFINITY`
 * `-0.0` is considered less than `0.0`
 
-This behavior is useful when you have generic use cases. Below is an example that shows the difference in behavior
-between operands statically typed as floating point numbers (`Double.NaN`) and operands **not** statically typed
-as floating point numbers (`listOf(T)`).
+Below is an example that shows the difference in behavior between operands statically typed as floating point numbers 
+(`Double.NaN`) and operands **not** statically typed as floating point numbers (`listOf(T)`).
 
 ```kotlin
 fun main() {
