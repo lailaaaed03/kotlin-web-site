@@ -18,7 +18,7 @@ Take your first steps with Kotlin and learn about:
 * [Classes](kotlin-tour-classes-part-1.md)
 * [Null safety](kotlin-tour-null-safety.md)
 
-<a href="kotlin-tour-hello-world.md"><img src="start-kotlin-tour.svg" width="500" alt="Start the Kotlin tour"/></a>
+<a href="kotlin-tour-hello-world.md"><img src="start-kotlin-tour.svg" width="700" alt="Start the Kotlin tour"/></a>
 
 <!---
 ## Intermediate
