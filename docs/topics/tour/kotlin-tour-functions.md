@@ -151,14 +151,45 @@ For example, the below function:
 fun uppercaseString(string: String): String {
     return string.uppercase()
 }
-
-fun main() {
-    val upperCase = uppercaseString("hello")  
-}
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-lambda-before-kotlin"}
 
-Can also be written as:
+Can also be written as a lambda expression:
+
+```kotlin
+{ string: String -> string.uppercase() }
+```
+
+Lambda expressions are written within curly braces `{}`.
+
+Within the lambda expression, you write:
+* the parameters followed by an `->`.
+* the function body after the `->`.
+
+In the above example:
+* `string` is a function parameter.
+* `string` has type `String`.
+* the function returns the result of the [`uppercase()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/uppercase.html)
+function called on `string`.
+
+> If you declare a lambda without parameters, then there is no need to use `->`. For example:
+> ```kotlin
+> { println("Log message") }
+> ```
+>
+{type="note"}
+
+Lambda expressions can be used in a number of ways. You can:
+* assign a lambda to a variable that you can then invoke later
+* pass a lambda expression as a parameter to another function
+* return a lambda expression from a function
+
+The following sections demonstrate each of these use cases.
+
+### Capture a variable
+
+Assigning a lambda expression to a variable is also referred to as capturing a variable. You assign a lambda expression 
+to a variable by using the assignment operator (`=`):
+
 ```kotlin
 val upperCase = { string: String -> string.uppercase() }
 
@@ -166,18 +197,12 @@ fun main() {
     println(upperCase("hello"))
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-lambda-after-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-lambda-variable-kotlin"}
 
-You store a lambda expression in a variable by using the assignment operator (`=`). The lambda expression itself is
-written within curly braces `{}`.
+### Pass to another function
 
-Within the lambda expression, you write:
-* the parameters followed by an `->`.
-* the function body after the `->`.
 
-> If you declare a lambda without parameters, then there is no need to use `->`.
->
-{type="note"}
+### Return from a function
 
 ### Function types
 
