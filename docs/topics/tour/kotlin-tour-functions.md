@@ -201,14 +201,60 @@ fun main() {
 
 ### Pass to another function
 
+A great example of when it is useful to pass a lambda expression to a function, is using the [filter()](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/filter.html)
+function on collections. If a lambda expression is the only function parameter, you can drop the function parentheses `()`.
 
-### Return from a function
+For example:
+
+```kotlin
+fun main() {
+    //sampleStart
+    val numbers = listOf(1, -2, 3, -4, 5, -6)
+    val positives = numbers.filter { x -> x > 0 }
+    val negatives = numbers.filter { x -> x < 0 }
+    println(positives)
+    //[1, 3, 5]
+    println(negatives)
+    //[-2, -4, -6]
+    //sampleEnd
+}
+```
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-lambda-filter-kotlin"}
+
+The `filter()` function accepts a lambda expression as a predicate:
+* `{ x -> x > 0 }` takes each element of the list and returns only those that are positive
+* `{ x -> x < 0 }` takes each element of the list and returns only those that are negative
+
+Another good example, is using the [map()](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/map.html) 
+function to transform items in a collection:
+
+```kotlin
+fun main() {
+    //sampleStart
+    val numbers = listOf(1, -2, 3, -4, 5, -6)
+    val doubled = numbers.map { x -> x * 2 }
+    val tripled = numbers.map { x -> x * 3 }
+    println(doubled)
+    //[2, -4, 6, -8, 10, -12]
+    println(tripled)
+    //[3, -6, 9, -12, 15, -18]
+    //sampleEnd
+}
+```
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-lambda-map-kotlin"}
+
+The `map()` function accepts a lambda expression as a predicate:
+* `{ x -> x * 2 }` takes each element of the list and returns that element multiplied by 2
+* `{ x -> x * 3 }` takes each element of the list and returns that element multiplied by 3
 
 ### Function types
 
-In the previous example, Kotlin's type inference inferred the type of `upperCase` from the parameter type. 
-But there may be times when you need to explicitly specify the parameter and return type. 
-Kotlin has **function types** for this purpose.
+Before demonstrating how you can return a lambda expression from a function, you first need to understand **function
+types**.
+
+You have already learned about basic types but functions themselves also have a type. Kotlin's powerful type inference 
+can infer a function's type most of the time from the parameter type. But there may be times when you need to explicitly
+specify the function type so that the compiler knows what is and isn't allowed for that function.
 
 The syntax for a function type has:
 * the parameters' types written within parentheses and separated by commas.
@@ -238,29 +284,54 @@ If your lambda has no parameters then the parentheses are left empty. For exampl
 >
 {type="note"}
 
-For more information on lambda expressions, see [Lambda expressions and anonymous functions](lambdas.md#lambda-expressions-and-anonymous-functions).
+### Return from a function
 
-<!---
+Lambda expressions can be returned from a function. So that the compiler understands what type the lambda
+expression returned is, you must declare a function type.
 
-## Anonymous functions
+In the below example, the `toSeconds()` function has function type `(Int) -> Int` because it always returns a lambda
+expression that takes a parameter of type `Int` and returns an `Int` value.
 
-Maybe?
-
-## Higher-order functions
-
-In Kotlin, functions can be used as a data type and stored in data structures such as variables. This means that we can
-use functions as function parameters and return them from other functions.
-
-A higher-order function is a function that takes another function as a parameter and/or returns a function.
-
-For example:
+The example uses a when expression to determine which lambda expression is returned when `toSeconds()` is invoked.
 
 ```kotlin
-fun calculate(x: Int, y: Int, operation: (Int, Int) -> Int): Int {
-    return operation(x, y)
+fun toSeconds(time: String): (Int) -> Int = when (time) {
+    "hour" -> { value -> value * 60 * 60 }
+    "minute" -> { value -> value * 60 }
+    "second" -> { value -> value }
+    else -> { value -> value }
+}
+
+fun main() {
+    val timesInMinutes = listOf(2, 10, 15, 1)
+    val min2sec = toSeconds("minute")
+    val totalTimeInSeconds = timesInMinutes.map(min2sec).sum()
+    println("Total time is $totalTimeInSeconds secs")
 }
 ```
--->
+
+### Trailing lambdas
+
+If a lambda expression is passed as the last parameter of a function, then the expression can be written outside the
+function parentheses `()`. This syntax is called a trailing lambda.
+
+For example, the [`fold()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.sequences/fold.html) function accepts an 
+initial value and an operation:
+
+```kotlin
+fun main() {
+    //sampleStart
+    //The initial value is zero. The operation sums the initial value with every item in the list cumulatively.
+    println(listOf(1, 2, 3).fold(0, { x, item -> x + item })) //6
+
+    //Alternatively, in the form of a trailing lambda
+    println(listOf(1, 2, 3).fold(0) { x, item -> x + item })  //6
+    //sampleEnd
+}
+```
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-trailing-lambda-kotlin"}
+
+For more information on lambda expressions, see [Lambda expressions and anonymous functions](lambdas.md#lambda-expressions-and-anonymous-functions).
 
 ## Practice
 
