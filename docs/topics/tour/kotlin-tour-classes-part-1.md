@@ -102,6 +102,7 @@ fun main() {
 {type="tip"}
 
 ## Member functions
+
 In addition to declaring properties as part of an object's characteristics, you can also define an object's behavior 
 with member functions.
 
@@ -129,13 +130,13 @@ fun main() {
 Data classes are a special type of class declared with keyword `data`, that have predefined member functions that
 automatically come with the class:
 
-| Function           | Description                                                                                                     |
-|--------------------|-----------------------------------------------------------------------------------------------------------------|
-| `copy()`           | To create a class instance by copying another, potentially with some different properties.                      |
-| `componentN()`     | To access properties of the class in their order of declaration. E.g. `component1` accesses the first property. |
-| `equals()` or `==` | To compare instances of a class.                                                                                |
-| `hashCode()`       | To expose the hash code of an instance, for comparison.                                                         |
-| `toString()`       | To print a readable string of the class instance and its properties.                                            |
+| Function           | Description                                                                                                    |
+|--------------------|----------------------------------------------------------------------------------------------------------------|
+| `copy()`           | Creates a class instance by copying another, potentially with some different properties.                       |
+| `componentN()`     | Accesses properties of the class in their order of declaration. E.g. `component1` accesses the first property. |
+| `equals()` or `==` | Compares instances of a class.                                                                                 |
+| `hashCode()`       | Exposes the hash code of an instance, for comparison.                                                          |
+| `toString()`       | Prints a readable string of the class instance and its properties.                                             |
 
 See below for an example of these functions in action:
 
@@ -182,6 +183,8 @@ fun main() {
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-data-classes-kotlin"}
+
+For the last step of our tour, you will learn about Kotlin's null safety.
 
 ## Practice
 

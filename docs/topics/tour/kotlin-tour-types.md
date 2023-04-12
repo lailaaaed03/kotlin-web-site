@@ -11,10 +11,10 @@
         <img src="icon-7-todo.svg" width="20" alt="Final step" /> <a href="kotlin-tour-null-safety.md">Null safety</a></p>
 </microformat>
 
-In Kotlin, we have data types that tell the compiler what functions and properties an object has.
+Kotlin has data types that tell the compiler what functions and properties an object has.
 
-In the last chapter, Kotlin's powerful type inference inferred from our example that `customers` has type: [`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/).
-Thus, we can perform arithmetic operations with `customers`:
+In the last chapter, Kotlin's powerful type inference inferred from the previous example that `customers` has type: [`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/).
+As `Int` is a number data type, you can perform arithmetic operations with `customers`:
 
 ```kotlin
 fun main() {
@@ -40,30 +40,20 @@ fun main() {
 > `+=`, `-=`, `*=`, `/=`, and `%=` are augmented assignment operators. For more information, see [Augmented assignments](operator-overloading.md#augmented-assignments).
 {type="info"}
 
-Kotlin has the following basic types:
-* Integers:
-  * `Byte`
-  * `Short`
-  * `Int`
-  * `Long`
-* Unsigned integers:
-  * `UByte`
-  * `UShort`
-  * `UInt`
-  * `ULong`
-* Floating-point types:
-  * `Float`
-  * `Double`
-* Booleans:
-  * `Boolean`
-* Characters:
-  * `Char`
-* Strings:
-  * `String`
+In total, Kotlin has the following basic types:
+
+|Category| Basic types|
+|--|--|
+| Integers | `Byte`, `Short`, `Int`, `Long` |
+| Unsigned integers | `UByte`, `UShort`, `UInt`, `ULong` |
+| Floating-point | `Float`, `Double` |
+| Booleans | `Boolean` |
+| Characters | `Char` |
+| Strings | `String` |
 
 For more information on basic types and their properties, see [Basic types](basic-types.md).
 
-With this knowledge, we can now declare variables and initialize them later. Kotlin can manage this as long as your variables
+With this knowledge, you can now declare variables and initialize them later. Kotlin can manage this as long as variables
 are initialized before the first read.
 
 To declare a variable without initializing it, specify its type with `:`. 
@@ -78,6 +68,8 @@ fun main() {
 //sampleEnd
 }
 ```
+
+Now that you know how to declare basic types, it's time to learn about collections.
 
 ## Practice
 

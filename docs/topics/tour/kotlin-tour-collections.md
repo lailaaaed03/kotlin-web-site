@@ -11,18 +11,26 @@
         <img src="icon-7-todo.svg" width="20" alt="Final step" /> <a href="kotlin-tour-null-safety.md">Null safety</a></p>
 </microformat>
 
-Kotlin has collections for grouping items:
-* Lists are ordered collections of items
-* Sets are unique collections of items
-* Maps are sets of key-value pairs where keys are unique and map to only one value
+When programming, it is useful to be able to group data into structures for later processing. Kotlin provides collections
+for exactly this purpose.
+
+Kotlin has the following collections for grouping items:
+
+| Collection type | Description |
+|---|---|
+| Lists | Ordered collections of items |
+| Sets | Unique collections of items |
+| Maps | Sets of key-value pairs where keys are unique and map to only one value |
 
 Each collection type can be mutable or read only.
 
 ## List
 
-To create a read-only list (`List`), use the `listOf()` function.
+To create a read-only list ([`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/)), use the 
+`[listOf()](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/list-of.html)` function.
 
-To create a mutable list (`MutableList`), use the `mutableListOf()` function.
+To create a mutable list ([`MutableList`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list.html)),
+use the [`mutableListOf()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/mutable-list-of.html) function.
 
 When creating lists, Kotlin can sometimes infer the type of items stored. To declare the type explicitly, add the type
 within angled brackets after the list declaration.
@@ -58,8 +66,8 @@ fun main() {
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="list-access-kotlin"}
 
-To get the first or last item in a list, use [first()](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/first.html)
-and [last()](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/last.html) functions respectively.
+To get the first or last item in a list, use [`first()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/first.html)
+and [`last()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/last.html) functions respectively.
 
 ```kotlin
 fun main() {
@@ -86,8 +94,8 @@ fun main() {
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="list-count-kotlin"}
 
-To add or remove items from a mutable list, use [add()](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/add.html)
-and [remove()](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/remove.html) functions respectively.
+To add or remove items from a mutable list, use [`add()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/add.html)
+and [`remove()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/remove.html) functions respectively.
 
 ```kotlin
 fun main() {
@@ -105,9 +113,11 @@ fun main() {
 
 ## Set
 
-To create a read-only set (`Set`), use the `setOf()` function.
+To create a read-only set ([`Set`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/)), use the 
+[`setOf()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/set-of.html) function.
 
-To create a mutable set (`MutableSet`), use the `mutableSetOf()` function.
+To create a mutable set ([`MutableSet`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-set/)),
+use the [`mutableSetOf()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/mutable-set-of.html) function.
 
 When creating sets, Kotlin can sometimes infer the type of items stored. To declare the type explicitly, add the type
 within angled brackets after the set declaration.
@@ -136,7 +146,7 @@ You can see in the example above that because sets only contain unique elements,
 
 As sets are **unordered**, it's not possible to access an item at a particular index.
 
-To get the number of items in a set, use the [count()](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/count.html)
+To get the number of items in a set, use the [`count()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/count.html)
 function:
 
 ```kotlin
@@ -150,8 +160,8 @@ fun main() {
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="set-count-kotlin"}
 
-To add or remove items from a mutable set, use [add()](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/add.html)
-and [remove()](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/remove.html) functions respectively.
+To add or remove items from a mutable set, use [`add()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/add.html)
+and [`remove()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/remove.html) functions respectively.
 
 ```kotlin
 fun main() {
@@ -169,9 +179,11 @@ fun main() {
 
 ## Map
 
-To create a read-only map (`Map`), use the `mapOf()` function.
+To create a read-only map ([`Map`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/)), use the 
+[`mapOf()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/map-of.html) function.
 
-To create a mutable map (`MutableMap`), use the `mutableMapOf()` function.
+To create a mutable map ([`MutableMap`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-map/)),
+use the [`mutableMapOf()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/mutable-map-of.html) function.
 
 When creating maps, Kotlin can sometimes infer the type of items stored. To declare the type explicitly, add the types
 of the keys and values within angled brackets after the map declaration.
@@ -210,7 +222,7 @@ fun main() {
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="map-access-kotlin"}
 
-To get the number of items in a map, use the [count()](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/count.html)
+To get the number of items in a map, use the [`count()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/count.html)
 function:
 
 ```kotlin
@@ -224,8 +236,8 @@ fun main() {
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="map-count-kotlin"}
 
-To add or remove items from a mutable map, use [put()](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-map/put.html)
-and [remove()](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/remove.html) functions respectively.
+To add or remove items from a mutable map, use [`put()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-map/put.html)
+and [`remove()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/remove.html) functions respectively.
 
 ```kotlin
 fun main() {
@@ -241,7 +253,7 @@ fun main() {
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="map-put-remove-kotlin"}
 
-To check if a specific key is already included in a map, use the [containsKey()](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/contains-key.html)
+To check if a specific key is already included in a map, use the [`containsKey()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/contains-key.html)
 function:
 
 ```kotlin
@@ -272,7 +284,7 @@ fun main() {
 
 For more information on what you can do with collections, see [Collections](collections-overview.md).
 
-Now that you know about basic types and how to manage collections, let's explore the logic that you can
+Now that you know about basic types and how to manage collections, it's time to explore the logic that you can
 use in your programs.
 
 ## Practice

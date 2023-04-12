@@ -27,11 +27,11 @@ In Kotlin:
 * the body of a function is written within curly braces `{}`
 * [`println()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/println.html) and [`print()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/print.html) functions print their arguments to standard output
 
-We'll discuss functions more in a couple of chapters.
+Functions will be discussed in more detail in a couple of chapters. Until then, all examples use the `main` function.
 
 ## Variables
 
-All programs need to be able to store data and variables help you to do just that. In Kotlin, you can declare:
+All programs need to be able to store data, and variables help you to do just that. In Kotlin, you can declare:
 * read-only variables with `val`
 * mutable variables with `var`
 
@@ -62,8 +62,10 @@ As `customers` is a mutable variable, its value can be reassigned after declarat
 
 ## String templates
 
-A string value is a sequence of characters in double quotes (`"`). You can use template expressions to access data stored
-in variables and other objects, and convert them into a string. Template expressions start with a dollar sign (`$`).
+It's useful to know how to print the contents of variables to standard output. You can do this with string templates. 
+You can use template expressions to access data stored in variables and other objects, and convert them into strings.
+A string value is a sequence of characters in double quotes (`"`). Template expressions always start with a dollar sign (`$`).
+
 For example:
 
 ```kotlin
@@ -79,8 +81,8 @@ fun main() {
 
 For more information, see [String templates](strings.md).
 
-You'll notice that we haven't declared any types for our variables. Kotlin has inferred the type for us: `Int`. We'll cover
-the different Kotlin types and how to declare them in the next chapter.
+You'll notice that there aren't any types declared for variables. Kotlin has inferred the type itself: `Int`. The different
+Kotlin basic types and how to declare them are discussed in the next chapter.
 
 ## Practice
 

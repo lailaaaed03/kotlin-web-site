@@ -12,7 +12,15 @@
 </microformat>
 
 In Kotlin, it's possible to have a `null` value. To help prevent issues with null values in your programs, Kotlin has 
-null safety. Null safety detects potential problems with null values at compile time, rather than at run time.
+null safety in place. Null safety detects potential problems with null values at compile time, rather than at run time.
+
+Null safety is a combination of features that allow you to:
+* explicitly declare when null values are allowed in your program
+* check for null values
+* use safe calls to properties or functions that may contain null values
+* declare actions to take if null values are detected
+
+Each section below covers in more detail how you can use each of these features.
 
 ## Nullable types
 
@@ -134,6 +142,8 @@ fun main() {
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-elvis-operator-kotlin"}
 
 For more information about null safety in Kotlin, see [Null safety](null-safety.md).
+
+This was the last chapter of our tour. It's time to wrap up and consider your next steps!
 
 ## Practice
 

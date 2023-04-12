@@ -11,7 +11,7 @@
         <img src="icon-7-todo.svg" width="20" alt="Final step" /> <a href="kotlin-tour-null-safety.md">Null safety</a></p>
 </microformat>
 
-Like other programming languages, Kotlin has tools for checking conditional expressions and creating loops.
+Like other programming languages, Kotlin is capable of checking conditional expressions and creating loops.
 
 ## Conditional expressions
 
@@ -60,8 +60,10 @@ fun main() {
 Use `when` when you have a conditional expression with multiple branches.
 `when` can be used either as a statement or as an expression.
 
-Below is an example of using `when` as a statement. Again, place the conditional expression within parentheses and the actions to take
-within curly braces `{}`. Use `->` in each branch to separate each condition from each action.
+Below is an example of using `when` as a statement:
+* Place the conditional expression within parentheses and the actions to take
+within curly braces `{}`. 
+* Use `->` in each branch to separate each condition from each action.
 
 ```kotlin
 fun main() {    
@@ -76,10 +78,10 @@ fun main() {
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-when-statement-kotlin"}
 
-Note that all branch conditions are checked sequentially until one of them is satisfied. So, only the first suitable 
+Note that all branch conditions are checked sequentially until one of them is satisfied. So only the first suitable 
 branch is executed.
 
-Below is an example of using `when` as an expression.
+Below is an example of using `when` as an expression. The `when` syntax is assigned immediately to a variable.
 
 ```kotlin
 fun main() {    
@@ -96,9 +98,11 @@ fun main() {
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-when-expression-kotlin"}
 
 If when is used as an expression, the else branch is mandatory, unless the compiler can detect that all possible cases 
-are covered with branch conditions.
+are covered by the branch conditions.
 
 ## Ranges
+
+Before we talk about loops, it's useful to know how to construct ranges for loops to iterate over.
 
 The most common way to create a range in Kotlin is to use the `..` operator. For example, `1..4` is equivalent to `1, 2, 3, 4`.
 
@@ -113,12 +117,10 @@ You can also do the same with `Char` ranges:
 * `'a'..'d'` is equivalent to `'a', 'b', 'c', 'd'`
 * `'z' downTo 's' step 2` is equivalent to `'z', 'x', 'v', 't'`
 
-Ranges are useful when creating loops, as you'll see in the next section.
-
 ## Loops
 
-The two most common loop structures in programming are `for` and `while`. `for` is useful to iterate over a range of values and perform an action.
-`while` is useful to continue an action until a particular condition is satisfied.
+The two most common loop structures in programming are `for` and `while`. `for` is useful to iterate over a range of 
+values and perform an action. `while` is useful to continue an action until a particular condition is satisfied.
 
 ### For
 
@@ -128,12 +130,33 @@ Place the iterator and range within parentheses `()` with keyword `in`. Add the 
 
 ```kotlin
 fun main() {
+    //sampleStart
     for (number in 1..5) { // number is the iterator and 1..5 is the range
         println(number)
     }
+    //1 2 3 4 5
+    //sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-for-loop-kotlin"}
+
+Collections can also be iterated over by loops:
+
+```kotlin
+fun main() {
+    //sampleStart
+    val cakes = listOf("carrot", "cheese", "chocolate")
+
+    for (cake in cakes) {
+        println("Yummy, it's a $cake cake!")
+    }
+    //Yummy, it's a carrot cake!
+    //Yummy, it's a cheese cake!
+    //Yummy, it's a chocolate cake!
+    //sampleEnd
+}
+```
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-for-collection-loop-kotlin"}
 
 ### While
 
@@ -182,6 +205,8 @@ fun main() {
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-while-do-loop-kotlin"}
 
 For more information and examples of conditional expressions and loops, see [Conditions and loops](control-flow.md).
+
+Now that you know the fundamentals of Kotlin control flow, it's time to learn how to write your own functions.
 
 ## Practice
 
