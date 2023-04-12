@@ -36,11 +36,11 @@ When creating lists, Kotlin can sometimes infer the type of items stored. To dec
 within angled brackets after the list declaration.
 
 ```kotlin
-fun main() {
-    //sampleStart
+fun main() { 
+//sampleStart
     val readOnlyNumbers = listOf(1, 2, 3)                  //Read only list
     val numbers: MutableList<Int> = mutableListOf(1, 2, 3) //Mutable list with explicit type declaration
-    //sampleEnd
+//sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="lists-declaration-kotlin"}
@@ -56,12 +56,12 @@ fun main() {
 To access an item in a list, use the [indexed access operator](operator-overloading.md#indexed-access-operator) `[]`:
 
 ```kotlin
-fun main() {
-    //sampleStart
+fun main() { 
+//sampleStart
     val readOnlyNumbers = listOf(1, 2, 3)
     println("The first item in the list is: ${readOnlyNumbers[0]}")
     //The first element of the list is: 1
-    //sampleEnd
+//sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="list-access-kotlin"}
@@ -70,12 +70,12 @@ To get the first or last item in a list, use [`first()`](https://kotlinlang.org/
 and [`last()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/last.html) functions respectively.
 
 ```kotlin
-fun main() {
-    //sampleStart
+fun main() { 
+//sampleStart
     val readOnlyNumbers = listOf(1, 2, 3)
     println("The first item in the list is: ${readOnlyNumbers.first()}")
     //The first item in the list is: 1
-    //sampleEnd
+//sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="list-first-kotlin"}
@@ -84,12 +84,12 @@ To get the number of items in a list, use the [count()](https://kotlinlang.org/a
 function:
 
 ```kotlin
-fun main() {
-    //sampleStart
+fun main() { 
+//sampleStart
     val readOnlyNumbers = listOf(1, 2, 3)
     println("This list has ${readOnlyNumbers.count()} items")
     //This list has 3 items
-    //sampleEnd
+//sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="list-count-kotlin"}
@@ -98,15 +98,15 @@ To add or remove items from a mutable list, use [`add()`](https://kotlinlang.org
 and [`remove()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/remove.html) functions respectively.
 
 ```kotlin
-fun main() {
-    //sampleStart
+fun main() { 
+//sampleStart
     val numbers: MutableList<Int> = mutableListOf(1, 2, 3)
     numbers.add(4)    //Add 4 to the list
     println(numbers)  //[1, 2, 3, 4]
     
     numbers.remove(4) //Remove the first 4 from the list
     println(numbers)  //[1, 2, 3]
-    //sampleEnd
+//sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="list-add-remove-kotlin"}
@@ -124,12 +124,14 @@ within angled brackets after the set declaration.
 
 ```kotlin
 fun main() {
-    //sampleStart
-    val readOnlyFruit = setOf("apple", "banana", "cherry", "cherry")                    //Read only set
-    val fruit: MutableSet<String> = mutableSetOf("apple", "banana", "cherry", "cherry") //Mutable set with explicit type declaration
+//sampleStart
+    val readOnlyFruit = setOf("apple", "banana", "cherry", "cherry") //Read-only set
+    val fruit: MutableSet<String> =
+        mutableSetOf("apple", "banana", "cherry", "cherry")          //Mutable set with explicit type declaration
+    
     println(readOnlyFruit)
     //[apple, banana, cherry]
-    //sampleEnd
+//sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="sets-declaration-kotlin"}
@@ -150,12 +152,12 @@ To get the number of items in a set, use the [`count()`](https://kotlinlang.org/
 function:
 
 ```kotlin
-fun main() {
-    //sampleStart
+fun main() { 
+//sampleStart
     val readOnlyFruit = setOf("apple", "banana", "cherry", "cherry")
     println("This set has ${readOnlyFruit.count()} items")
     //This set has 3 items
-    //sampleEnd
+//sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="set-count-kotlin"}
@@ -164,15 +166,15 @@ To add or remove items from a mutable set, use [`add()`](https://kotlinlang.org/
 and [`remove()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/remove.html) functions respectively.
 
 ```kotlin
-fun main() {
-    //sampleStart
+fun main() { 
+//sampleStart
     val fruit: MutableSet<String> = mutableSetOf("apple", "banana", "cherry", "cherry")
     fruit.add("dragonfruit")    //Add "dragonfruit" to the set
-    println(fruit)  //[apple, banana, cherry, dragonfruit]
+    println(fruit)              //[apple, banana, cherry, dragonfruit]
     
     fruit.remove("dragonfruit") //Remove "dragonfruit" from the set
-    println(fruit)  //[apple, banana, cherry]
-    //sampleEnd
+    println(fruit)              //[apple, banana, cherry]
+//sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="set-add-remove-kotlin"}
@@ -192,10 +194,11 @@ The easiest way to create maps is to use the [`to`](https://kotlinlang.org/api/l
 
 ```kotlin
 fun main() {
-    //sampleStart
-    val readOnlyAccountBalances = mapOf(1 to 100, 2 to 100, 3 to 100)                      //Read only map
-    val accountBalances: MutableMap<Int, Int> = mutableMapOf(1 to 100, 2 to 100, 3 to 100) //Mutable map with explicit type declaration
-    //sampleEnd
+//sampleStart
+    val readOnlyAccountBalances = mapOf(1 to 100, 2 to 100, 3 to 100) //Read only map
+    val accountBalances: MutableMap<Int, Int> =
+        mutableMapOf(1 to 100, 2 to 100, 3 to 100)                    //Mutable map with explicit type declaration
+//sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="maps-declaration-kotlin"}
@@ -212,12 +215,12 @@ To access a value in a map, use the [indexed access operator](operator-overloadi
 its key:
 
 ```kotlin
-fun main() {
-    //sampleStart
+fun main() { 
+//sampleStart
     val readOnlyAccountBalances = mapOf(1 to 100, 2 to 100, 3 to 100)
     println("The first value in the map is: ${readOnlyAccountBalances[1]}")
     //The first value in the map is: 100
-    //sampleEnd
+//sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="map-access-kotlin"}
@@ -226,12 +229,12 @@ To get the number of items in a map, use the [`count()`](https://kotlinlang.org/
 function:
 
 ```kotlin
-fun main() {
-    //sampleStart
+fun main() { 
+//sampleStart
     val readOnlyAccountBalances = mapOf(1 to 100, 2 to 100, 3 to 100)
     println("This map has ${readOnlyAccountBalances.count()} key-value pairs")
     //This map has 3 key-value pairs
-    //sampleEnd
+//sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="map-count-kotlin"}
@@ -240,15 +243,15 @@ To add or remove items from a mutable map, use [`put()`](https://kotlinlang.org/
 and [`remove()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/remove.html) functions respectively.
 
 ```kotlin
-fun main() {
-    //sampleStart
+fun main() { 
+//sampleStart
     val accountBalances: MutableMap<Int, Int> = mutableMapOf(1 to 100, 2 to 100, 3 to 100)
     accountBalances.put(4, 100)  //Add key 4 with value 100 to the list
     println(accountBalances)     //{1=100, 2=100, 3=100, 4=100}
     
     accountBalances.remove(4)    //Remove the key 4 from the list
     println(accountBalances)     //{1=100, 2=100, 3=100}
-    //sampleEnd
+//sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="map-put-remove-kotlin"}
@@ -257,12 +260,12 @@ To check if a specific key is already included in a map, use the [`containsKey()
 function:
 
 ```kotlin
-fun main() {
-    //sampleStart
+fun main() { 
+//sampleStart
     val readOnlyAccountBalances = mapOf(1 to 100, 2 to 100, 3 to 100)
     println(readOnlyAccountBalances.containsKey(2))
     //true
-    //sampleEnd
+//sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="map-contains-keys-kotlin"}
@@ -271,13 +274,14 @@ To obtain a collection of the keys or values of a map, use the [`keys`](https://
 and [`values`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/values.html) properties respectively:
 
 ```kotlin
-fun main() {
-    //sampleStart
+fun main() { 
+//sampleStart
     val readOnlyAccountBalances = mapOf(1 to 100, 2 to 100, 3 to 100)
     println(readOnlyAccountBalances.keys)
     //[1, 2, 3]
     println(readOnlyAccountBalances.values)
     //[100, 100, 100]
+//sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="map-keys-values-kotlin"}

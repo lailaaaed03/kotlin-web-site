@@ -19,20 +19,3 @@ Take your first steps with Kotlin and learn about:
 * [Null safety](kotlin-tour-null-safety.md)
 
 <a href="kotlin-tour-hello-world.md"><img src="start-kotlin-tour.svg" width="700" alt="Start the Kotlin tour"/></a>
-
-<!---
-## Intermediate
-<u>Intermediate</u>
-
-Ready for the next level? Learn about:
-* Interfaces
-* Companion objects
-* Nested classes
-
-## Advanced
-<u>Advanced</u>
-
-To use Kotlin to its maximum potential, learn about:
-* Generics
-* Coroutines
--->

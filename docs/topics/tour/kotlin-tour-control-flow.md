@@ -23,18 +23,19 @@ using `when` as it leads to more robust and safer programs.
 To use `if`, add the conditional expression within parentheses and the action to take if the result is true within curly braces `{}`:
 
 ```kotlin
-fun main() { 
+fun main() {
 //sampleStart
     val d: Int
-    val check =  true
+    val check = true
 
     if (check) {
-        d = 1   
+        d = 1
     } else {
-        d = 2   
+        d = 2
     }
 
     println(d)
+    //1
 //sampleEnd
 }
 ```
@@ -66,14 +67,16 @@ within curly braces `{}`.
 * Use `->` in each branch to separate each condition from each action.
 
 ```kotlin
-fun main() {    
-    val obj = "Hello"    
-    
-    when (obj) {                                     
-        1 -> println("One")            //Checks whether obj equals to 1
+fun main() {
+//sampleStart
+    val obj = "Hello"
+
+    when (obj) {
+        "1" -> println("One")          //Checks whether obj equals to "One"
         "Hello" -> println("Greeting") //Checks whether obj equals to "Hello"
         else -> println("Unknown")     //Default statement
-    }   
+    }
+//sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-when-statement-kotlin"}
@@ -84,15 +87,17 @@ branch is executed.
 Below is an example of using `when` as an expression. The `when` syntax is assigned immediately to a variable.
 
 ```kotlin
-fun main() {    
+fun main() {
+//sampleStart    
     val obj = "Hello"    
     
     val result = when (obj) {                                     
-        1 -> "One"            //If obj equals 1, sets result to "one"
-        "Hello" -> 1          //If obj equals "Hello", sets result to 1
-        else -> 42            //Sets result to 42 if no previous condition is satisfied
+        "1" -> "One"            //If obj equals "1", sets result to "one"
+        "Hello" -> "Greeting"   //If obj equals "Hello", sets result to "Greeting"
+        else -> "Unknown"       //Sets result to "Unknown" if no previous condition is satisfied
     }
     println(result)
+//sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-when-expression-kotlin"}
@@ -130,12 +135,12 @@ Place the iterator and range within parentheses `()` with keyword `in`. Add the 
 
 ```kotlin
 fun main() {
-    //sampleStart
+//sampleStart
     for (number in 1..5) { // number is the iterator and 1..5 is the range
         println(number)
     }
     //1 2 3 4 5
-    //sampleEnd
+//sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-for-loop-kotlin"}
@@ -143,8 +148,8 @@ fun main() {
 Collections can also be iterated over by loops:
 
 ```kotlin
-fun main() {
-    //sampleStart
+fun main() { 
+//sampleStart
     val cakes = listOf("carrot", "cheese", "chocolate")
 
     for (cake in cakes) {
@@ -153,7 +158,7 @@ fun main() {
     //Yummy, it's a carrot cake!
     //Yummy, it's a cheese cake!
     //Yummy, it's a chocolate cake!
-    //sampleEnd
+//sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-for-collection-loop-kotlin"}
@@ -175,11 +180,13 @@ In the first use case (`while`):
 
 ```kotlin
 fun main() {
-    cakesEaten = 0
+//sampleStart
+    var cakesEaten = 0
     while (cakesEaten < 5) {
         println("Eat a cake")
         cakesEaten++
     }
+//sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-while-loop-kotlin"}
@@ -190,8 +197,9 @@ In the second use case (`do-while`):
 
 ```kotlin
 fun main() {
-    cakesEaten = 0
-    cakesBaked = 0
+//sampleStart
+    var cakesEaten = 0
+    var cakesBaked = 0
     while (cakesEaten < 5) {
         println("Eat a cake")
         cakesEaten++
@@ -200,6 +208,7 @@ fun main() {
         println("Bake a cake")
         cakesBaked++
     } while (cakesBaked < cakesEaten)
+//sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-while-do-loop-kotlin"}

@@ -19,17 +19,17 @@ As `Int` is a number data type, you can perform arithmetic operations with `cust
 ```kotlin
 fun main() {
     val popcorn = 5
-    val hotdog = 7 
+    val hotdog = 7
 //sampleStart
     var customers = 10
-    
+
     //Some customers leave the queue
     customers = 8
-    
-    customers+= 7 //Example of addition: 15
-    customers-= 3 //Example of subtraction: 12
-    customers*= 2 //Example of multiplication: 24
-    customers/= 3 //Example of division: 8
+
+    customers += 7 //Example of addition: 15
+    customers -= 3 //Example of subtraction: 12
+    customers *= 2 //Example of multiplication: 24
+    customers /= 3 //Example of division: 8
 
     println(customers) // 8
 //sampleEnd
@@ -60,7 +60,7 @@ To declare a variable without initializing it, specify its type with `:`.
 
 ```kotlin
 fun main() {
-//samplesStart
+//sampleStart
     val d: Int // Variable declared without initialization
     d = 3      // Variable initialized
 
