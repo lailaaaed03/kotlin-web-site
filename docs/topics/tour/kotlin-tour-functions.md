@@ -182,6 +182,7 @@ Lambda expressions can be used in a number of ways. You can:
 * assign a lambda to a variable that you can then invoke later
 * pass a lambda expression as a parameter to another function
 * return a lambda expression from a function
+* invoke a lambda expression on its own
 
 The following sections demonstrate each of these use cases.
 
@@ -309,6 +310,21 @@ fun main() {
     println("Total time is $totalTimeInSeconds secs")
 }
 ```
+
+### Invoke separately
+
+Lambda expressions can be invoked on their own by placing parentheses `()` after the curly braces `{}` and including
+any parameters within the parentheses. For example:
+
+```kotlin
+fun main() {
+    //sampleStart
+    println({ string: String -> string.uppercase() }("hello"))
+    //HELLO
+    //sampleEnd
+}
+```
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-lambda-standalone-kotlin"}
 
 ### Trailing lambdas
 
