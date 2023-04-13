@@ -51,7 +51,7 @@ fun main() {
     println(strLength(nullable))                          //Throws a compiler error
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-nullable-type-kotlin"}
+{kotlin-runnable="true" validate="false" kotlin-min-compiler-version="1.3" id="tour-nullable-type-kotlin"}
 
 > 'length' is a property of the [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/) class that 
 > contains the number of characters within a string.
