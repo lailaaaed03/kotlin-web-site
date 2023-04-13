@@ -187,7 +187,7 @@ fun main() {
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-data-classes-kotlin"}
 
-For the last step of our tour, you will learn about Kotlin's null safety.
+For the last step of our tour, you will learn about Kotlin's [null safety]((kotlin-tour-null-safety.md)).
 
 ## Practice
 
@@ -209,6 +209,3 @@ For the last step of our tour, you will learn about Kotlin's null safety.
     }
 ```
 {initial-collapse-state="collapsed" collapsed-title="Example solution"}
-
-## Next
-[Learn about null safety](kotlin-tour-null-safety.md)

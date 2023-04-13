@@ -82,7 +82,7 @@ fun main() {
 For more information, see [String templates](strings.md).
 
 You'll notice that there aren't any types declared for variables. Kotlin has inferred the type itself: `Int`. The different
-Kotlin basic types and how to declare them are discussed in the next chapter.
+Kotlin basic types and how to declare them are discussed in the [next chapter](kotlin-tour-types.md).
 
 ## Practice
 
@@ -102,6 +102,3 @@ Complete the code below to make the function print `"OK"` to standard output. Te
     }
 ```
 {initial-collapse-state="collapsed" collapsed-title="Example solution"}
-
-## Next
-[Learn about Kotlin basic types](kotlin-tour-types.md)

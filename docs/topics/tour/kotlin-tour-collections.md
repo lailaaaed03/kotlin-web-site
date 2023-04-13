@@ -288,8 +288,8 @@ fun main() {
 
 For more information on what you can do with collections, see [Collections](collections-overview.md).
 
-Now that you know about basic types and how to manage collections, it's time to explore the logic that you can
-use in your programs.
+Now that you know about basic types and how to manage collections, it's time to explore the [control flow](kotlin-tour-control-flow.md)
+that you can use in your programs.
 
 ## Practice
 
@@ -309,6 +309,3 @@ Complete the code below to make the function print `"OK"` to standard output. Te
     }
 ```
 {initial-collapse-state="collapsed" collapsed-title="Example solution"}
-
-## Next
-[Learn about control flow](kotlin-tour-control-flow.md)

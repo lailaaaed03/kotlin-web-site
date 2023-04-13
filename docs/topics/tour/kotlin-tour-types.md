@@ -69,7 +69,7 @@ fun main() {
 }
 ```
 
-Now that you know how to declare basic types, it's time to learn about collections.
+Now that you know how to declare basic types, it's time to learn about [collections](kotlin-tour-collections.md).
 
 ## Practice
 
@@ -91,7 +91,3 @@ Now that you know how to declare basic types, it's time to learn about collectio
     }
 ```
 {initial-collapse-state="collapsed" collapsed-title="Example solution"}
-
-## Next
-
-[Learn about collections](kotlin-tour-collections.md)

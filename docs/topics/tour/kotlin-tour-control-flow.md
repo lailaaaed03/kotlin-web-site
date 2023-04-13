@@ -215,7 +215,7 @@ fun main() {
 
 For more information and examples of conditional expressions and loops, see [Conditions and loops](control-flow.md).
 
-Now that you know the fundamentals of Kotlin control flow, it's time to learn how to write your own functions.
+Now that you know the fundamentals of Kotlin control flow, it's time to learn how to write your own [functions](kotlin-tour-functions.md).
 
 ## Practice
 
@@ -237,6 +237,3 @@ Now that you know the fundamentals of Kotlin control flow, it's time to learn ho
     }
 ```
 {initial-collapse-state="collapsed" collapsed-title="Example solution"}
-
-## Next
-[Learn about functions](kotlin-tour-functions.md)

@@ -357,7 +357,7 @@ fun main() {
 
 For more information on lambda expressions, see [Lambda expressions and anonymous functions](lambdas.md#lambda-expressions-and-anonymous-functions).
 
-The next step in our tour is to learn about classes in Kotlin.
+The next step in our tour is to learn about [classes](kotlin-tour-classes-part-1.md) in Kotlin.
 
 ## Practice
 
@@ -379,6 +379,3 @@ The next step in our tour is to learn about classes in Kotlin.
     }
 ```
 {initial-collapse-state="collapsed" collapsed-title="Example solution"}
-
-## Next
-[Learn about classes](kotlin-tour-classes-part-1.md)

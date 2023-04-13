@@ -143,7 +143,7 @@ fun main() {
 
 For more information about null safety in Kotlin, see [Null safety](null-safety.md).
 
-This was the last chapter of our tour. It's time to wrap up and consider your next steps!
+This was the last chapter of our tour. It's time to [wrap up](kotlin-tour-beginner-wrap-up.md) and consider your next steps!
 
 ## Practice
 
@@ -165,6 +165,3 @@ This was the last chapter of our tour. It's time to wrap up and consider your ne
     }
 ```
 {initial-collapse-state="collapsed" collapsed-title="Example solution"}
-
-## Next
-[Wrap up](kotlin-tour-beginner-wrap-up.md)
