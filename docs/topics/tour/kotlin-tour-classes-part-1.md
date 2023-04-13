@@ -31,7 +31,7 @@ class Contact(val id: Int, var email: String)
 * Within the class body defined by curly braces `{}`.
 ```kotlin
 class Contact(val id: Int, var email: String) {
-    val category: String
+    val category: String = ""
 }
 ```
 
@@ -67,6 +67,7 @@ fun main() {
     val contact = Contact(1, "mary@gmail.com")
 }
 ```
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-class-create-instance-kotlin"}
 
 In the above example:
 * `Contact` is a class
@@ -87,8 +88,10 @@ class Contact(val id: Int, var email: String)
 fun main() {
     val contact = Contact(1, "mary@gmail.com")
     println(contact.email)           //Prints the value of the property: email
+    //mary@gmail.com
     contact.email = "jane@gmail.com" //Updates the value of the property: email
     println(contact.email)           //Prints the new value of the property: email
+    //jane@gmail.com
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-access-property-kotlin"}
@@ -118,7 +121,8 @@ class Contact(val id: Int, var email: String) {
 
 fun main() {
     val contact = Contact(1, "mary@gmail.com")
-    contact.printId()           //Calls member function printId() that prints 1
+    contact.printId()           //Calls member function printId()
+    //1
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-member-function-kotlin"}
@@ -179,7 +183,6 @@ fun main() {
     //Alex
     println(user.component2()) //Prints second property of user
     //1
-
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-data-classes-kotlin"}

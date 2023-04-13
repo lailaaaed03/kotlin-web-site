@@ -33,6 +33,7 @@ fun sum(x: Int, y: Int): Int {
 
 fun main() {
     println(sum(1, 2))
+    //3
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-simple-function-kotlin"}
@@ -57,6 +58,7 @@ fun printMessageWithPrefix(message: String, prefix: String = "Info") {
 
 fun main() {
     printMessageWithPrefix(prefix = "Log", message = "Hello") //Using named arguments with swapped parameter order
+    //[Log] Hello
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-named-arguments-function-kotlin"}
@@ -66,9 +68,6 @@ fun main() {
 You can define default values for your function parameters. Any parameter with a default value can be omitted when
 calling your function. To declare a default value, use the assignment operator `=` after the type.
 
-In the below example, [string templates](strings.md#string-templates) (`$`) are used to access
-the parameter values, convert them to `String` type, and then concatenate them into a string for printing.
-
 ```kotlin
 fun printMessageWithPrefix(message: String, prefix: String = "Info") {
     println("[$prefix] $message")
@@ -76,8 +75,11 @@ fun printMessageWithPrefix(message: String, prefix: String = "Info") {
 
 fun main() {
     printMessageWithPrefix("Hello", "Log") //Function called with both parameters
+    //[Log] Hello
     printMessageWithPrefix("Hello")        //Function called only with message parameter
+    //[Info] Hello
     printMessageWithPrefix(prefix = "Log", message = "Hello")
+    //[Log] Hello
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-default-param-function-kotlin"}
@@ -99,11 +101,12 @@ If your function doesn't return a useful value then it's return type is `Unit`. 
 ```kotlin
 fun printMessage(message: String): Unit {
     println(message)
-    // `return Unit` or `return` is optional
+    //`return Unit` or `return` is optional
 }
 
 fun main() {
     printMessage("Hello")
+    //Hello
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-unit-function-kotlin"}
@@ -119,6 +122,7 @@ fun sum(x: Int, y: Int): Int {
 
 fun main() {
     println(sum(1, 2))
+    //3
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-simple-function-before-kotlin"}
@@ -131,6 +135,7 @@ fun sum(x: Int, y: Int) = x + y
 
 fun main() {
     println(sum(1, 2))
+    //3
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-simple-function-after-kotlin"}
@@ -195,6 +200,7 @@ val upperCase = { string: String -> string.uppercase() }
 
 fun main() {
     println(upperCase("hello"))
+    //HELLO
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-lambda-variable-kotlin"}
@@ -269,6 +275,7 @@ val upperCase: (String) -> String = { string -> string.uppercase() }
 
 fun main() {
     println(upperCase("hello"))
+    //HELLO
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-lambda-function-type-kotlin"}
@@ -307,8 +314,10 @@ fun main() {
     val min2sec = toSeconds("minute")
     val totalTimeInSeconds = timesInMinutes.map(min2sec).sum()
     println("Total time is $totalTimeInSeconds secs")
+    //Total time is 1680 secs
 }
 ```
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-lambda-return-from-function-kotlin"}
 
 ### Invoke separately
 

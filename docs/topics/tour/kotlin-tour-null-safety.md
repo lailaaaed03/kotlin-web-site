@@ -91,10 +91,10 @@ In the below example, the `lengthString()` function uses a safe call to return e
 ```kotlin
 fun lengthString(maybeString: String?): Int? = maybeString?.length
 
-fun main() {
- var nullString: String? = null
- println(lengthString(nullString))
- //null
+fun main() { 
+    var nullString: String? = null
+    println(lengthString(nullString))
+    //null
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-safe-call-property-kotlin"}
@@ -115,9 +115,9 @@ is skipped and `null` is returned.
 
 ```kotlin
 fun main() {
- var nullString: String? = null
- println(nullString?.uppercase())
- //null
+    var nullString: String? = null
+    println(nullString?.uppercase())
+    //null
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-safe-call-function-kotlin"}
@@ -135,7 +135,7 @@ As a result, the Elvis operator returns `0`.
 ```kotlin
 fun main() {
     var nullString: String? = null
-    println(name?.length ?: 0)
+    println(nullString?.length ?: 0)
     //0
 }
 ```
