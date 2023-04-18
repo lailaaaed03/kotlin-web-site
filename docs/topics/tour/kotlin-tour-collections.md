@@ -94,6 +94,19 @@ fun main() {
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="list-count-kotlin"}
 
+To check that an item is in a list, use the [`in`](operator-overloading.md#in-operator) operator:
+
+```kotlin
+fun main() {
+//sampleStart
+    val readOnlyNumbers = listOf(1, 2, 3)
+    println(2 in readOnlyNumbers)
+    //true
+//sampleEnd
+}
+```
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="list-in-kotlin"}
+
 To add or remove items from a mutable list, use [`add()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/add.html)
 and [`remove()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/remove.html) functions respectively.
 
@@ -161,6 +174,19 @@ fun main() {
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="set-count-kotlin"}
+
+To check that an item is in a set, use the [`in`](operator-overloading.md#in-operator) operator:
+
+```kotlin
+fun main() {
+//sampleStart
+    val readOnlyFruit = setOf("apple", "banana", "cherry", "cherry")
+    println("banana" in readOnlyFruit)
+    //true
+//sampleEnd
+}
+```
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="set-in-kotlin"}
 
 To add or remove items from a mutable set, use [`add()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/add.html)
 and [`remove()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/remove.html) functions respectively.
@@ -285,6 +311,21 @@ fun main() {
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="map-keys-values-kotlin"}
+
+To check that a key or value is in a map, use the [`in`](operator-overloading.md#in-operator) operator:
+
+```kotlin
+fun main() {
+//sampleStart
+    val readOnlyAccountBalances = mapOf(1 to 100, 2 to 100, 3 to 100)
+    println(2 in readOnlyAccountBalances.keys)
+    //true
+    println(200 in readOnlyAccountBalances.values)
+    //false
+//sampleEnd
+}
+```
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="map-in-kotlin"}
 
 For more information on what you can do with collections, see [Collections](collections-overview.md).
 
