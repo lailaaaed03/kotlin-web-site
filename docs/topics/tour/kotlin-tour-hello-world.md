@@ -3,7 +3,7 @@
 <microformat>
     <p>This is the first part of the <strong>Beginner</strong> Kotlin tour:</p>
     <p><img src="icon-1.svg" width="20" alt="First step" /> <strong>Hello world</strong><br />
-        <img src="icon-2-todo.svg" width="20" alt="Second step" /> <a href="kotlin-tour-types.md">Basic types</a><br />
+        <img src="icon-2-todo.svg" width="20" alt="Second step" /> <a href="kotlin-tour-basic-types.md">Basic types</a><br />
         <img src="icon-3-todo.svg" width="20" alt="Third step" /> <a href="kotlin-tour-collections.md">Collections</a><br />
         <img src="icon-4-todo.svg" width="20" alt="Fourth step" /> <a href="kotlin-tour-control-flow.md">Control flow</a><br />
         <img src="icon-5-todo.svg" width="20" alt="Fifth step" /> <a href="kotlin-tour-functions.md">Functions</a><br />
@@ -81,8 +81,8 @@ fun main() {
 
 For more information, see [String templates](strings.md).
 
-You'll notice that there aren't any types declared for variables. Kotlin has inferred the type itself: `Int`. The different
-Kotlin basic types and how to declare them are discussed in the [next chapter](kotlin-tour-types.md).
+You'll notice that there aren't any types declared for variables. Kotlin has inferred the type itself: `Int`. This tour
+discusses the different Kotlin basic types and how to declare them in the [next chapter](kotlin-tour-basic-types.md).
 
 ## Practice
 

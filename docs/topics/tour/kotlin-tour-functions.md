@@ -3,7 +3,7 @@
 <microformat>
     <p>This is the fifth part of the <strong>Beginner</strong> Kotlin tour:</p>
     <p><img src="icon-1-done.svg" width="20" alt="First step" /> <a href="kotlin-tour-hello-world.md">Hello world</a><br />
-        <img src="icon-2-done.svg" width="20" alt="Second step" /> <a href="kotlin-tour-types.md">Basic types</a><br />
+        <img src="icon-2-done.svg" width="20" alt="Second step" /> <a href="kotlin-tour-basic-types.md">Basic types</a><br />
         <img src="icon-3-done.svg" width="20" alt="Third step" /> <a href="kotlin-tour-collections.md">Collections</a><br />
         <img src="icon-4-done.svg" width="20" alt="Fourth step" /> <a href="kotlin-tour-control-flow.md">Control flow</a><br />
         <img src="icon-5.svg" width="20" alt="Fifth step" /> <strong>Functions</strong><br />
@@ -208,7 +208,7 @@ fun main() {
 ### Pass to another function
 
 A great example of when it is useful to pass a lambda expression to a function, is using the [filter()](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/filter.html)
-function on collections. If a lambda expression is the only function parameter, you can drop the function parentheses `()`.
+function on collections.
 
 For example:
 
@@ -230,6 +230,12 @@ fun main() {
 The `filter()` function accepts a lambda expression as a predicate:
 * `{ x -> x > 0 }` takes each element of the list and returns only those that are positive
 * `{ x -> x < 0 }` takes each element of the list and returns only those that are negative
+
+> If a lambda expression is the only function parameter, you can drop the function parentheses `()`.
+> This is an example of a [trailing lambda](#trailing-lambdas), which is discussed in more detail at the end of this
+> chapter.
+>
+{type = "note"}
 
 Another good example, is using the [map()](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/map.html) 
 function to transform items in a collection:
@@ -336,8 +342,9 @@ fun main() {
 
 ### Trailing lambdas
 
+As you have already seen, if a lambda expression is the only function parameter, you can drop the function parentheses `()`.
 If a lambda expression is passed as the last parameter of a function, then the expression can be written outside the
-function parentheses `()`. This syntax is called a trailing lambda.
+function parentheses `()`. In both cases, this syntax is called a trailing lambda.
 
 For example, the [`fold()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.sequences/fold.html) function accepts an 
 initial value and an operation:
