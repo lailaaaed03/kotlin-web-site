@@ -93,7 +93,7 @@ Complete the code below to make the function print `"OK"` to standard output. Te
         TODO()
     }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" validate="false"}
+{initial-collapse-state="expanded" validate="false"}
 
 |---|---|
 ```kotlin
