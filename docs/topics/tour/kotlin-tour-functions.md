@@ -17,7 +17,7 @@ In Kotlin:
 * function parameters are written within parentheses `()`.
 * each parameter must have a type, and multiple parameters must be separated by commas.
 * the return type is written after the function's parentheses `()`, separated by a colon `:`.
-* the body of a function is written within curly braces {}.
+* the body of a function is written within curly braces `{}`.
 * the `return` keyword is used to exit or return something from a function.
 
 In the below example:

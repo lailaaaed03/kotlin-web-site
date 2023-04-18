@@ -16,11 +16,11 @@ for exactly this purpose.
 
 Kotlin has the following collections for grouping items:
 
-| Collection type | Description |
-|---|---|
-| Lists | Ordered collections of items |
-| Sets | Unique collections of items |
-| Maps | Sets of key-value pairs where keys are unique and map to only one value |
+| **Collection type** | **Description**                                                         |
+|---------------------|-------------------------------------------------------------------------|
+| Lists               | Ordered collections of items                                            |
+| Sets                | Unique collections of items                                             |
+| Maps                | Sets of key-value pairs where keys are unique and map to only one value |
 
 Each collection type can be mutable or read only.
 
@@ -79,6 +79,15 @@ fun main() {
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="list-first-kotlin"}
+
+> [`first()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/first.html) and [`last()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/last.html)
+> functions are examples of **extension** functions. To call an extension function on an object, write the function name 
+> after the object appended with a period `.` 
+> 
+> For more information about extension functions, see [Extension functions](extensions.md#extension-functions).
+> For the purposes of this tour, you only need to know how to call them.
+> 
+{ type = "note" }
 
 To get the number of items in a list, use the [count()](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/count.html)
 function:

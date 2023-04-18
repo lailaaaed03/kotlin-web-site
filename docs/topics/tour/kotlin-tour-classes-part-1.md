@@ -78,7 +78,7 @@ In the above example:
 Kotlin classes can have many constructors, including ones that you define yourself. To learn more about how to declare 
 multiple constructors, see [Constructors](classes.md#constructors).
 
-## Access properties
+## Access class properties
 
 To access a property of an instance, write the name of the property after the instance name appended with a period `.`:
 
@@ -129,12 +129,19 @@ fun main() {
 
 ## Data classes
 
-<!-- Rewrite intro to explain why data classes are useful -->
+Kotlin has **data classes** which are particularly useful for storing data. Data classes have the same functionality as 
+classes, but they come automatically with additional member functions. These member functions allow you to easily copy 
+instances of a class, compare instances, print the instance to readable output, and more. As these functions are
+automatically available, you don't have to waste time writing the same boilerplate code for each of your classes.
 
-Data classes are a special type of class declared with keyword `data`, that have predefined member functions that
-automatically come with the class:
+To declare a data class, use the keyword `data`:
+```kotlin
+data class User(val name: String, val id: Int)
+```
 
-| Function           | Description                                                                                                    |
+All the predefined member functions of a data class are listed in the table below:
+
+| **Function**       | **Description**                                                                                                |
 |--------------------|----------------------------------------------------------------------------------------------------------------|
 | `copy()`           | Creates a class instance by copying another, potentially with some different properties.                       |
 | `componentN()`     | Accesses properties of the class in their order of declaration. E.g. `component1` accesses the first property. |
@@ -142,26 +149,84 @@ automatically come with the class:
 | `hashCode()`       | Exposes the hash code of an instance, for comparison.                                                          |
 | `toString()`       | Prints a readable string of the class instance and its properties.                                             |
 
-See below for an example of these functions in action:
+See the following sections for examples of how to use each function:
+* [Copy instance](#copy-instance)
+* [Access properties](#access-data-class-properties)
+* [Compare instances](#compare-instances)
+* [Expose hash code](#expose-hash-code)
+* [Print as string](#print-as-string)
+
+### Copy instance
 
 ```kotlin
 data class User(val name: String, val id: Int)
 
 fun main() {
+    //sampleStart
     val user = User("Alex", 1)
     val secondUser = User("Alex", 1)
     val thirdUser = User("Max", 2)
     
-    //toString()
-    println(user)              //Automatically uses toString() function so that output is easy to read
+    println(user.copy())       //Creates an exact copy of user
     //User(name=Alex, id=1)
+    println(user.copy("Max"))  //Creates a copy of user with name: "Max"
+    //User(name=Max, id=1)
+    println(user.copy(id = 3)) //Creates a copy of user with id: 3
+    //User(name=Alex, id=3)
+    //sampleEnd
+}
+```
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-data-classes-copy-instance-kotlin"}
 
-    //equals()
+### Access data class properties
+
+```kotlin
+data class User(val name: String, val id: Int)
+
+fun main() {
+    //sampleStart
+    val user = User("Alex", 1)
+    
+    println(user.component1()) //Prints first property of user
+    //Alex
+    println(user.component2()) //Prints second property of user
+    //1
+    //sampleEnd
+}
+```
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-data-classes-access-properties-kotlin"}
+
+### Compare instances
+
+```kotlin
+data class User(val name: String, val id: Int)
+
+fun main() {
+    //sampleStart
+    val user = User("Alex", 1)
+    val secondUser = User("Alex", 1)
+    val thirdUser = User("Max", 2)
+    
     println("user == secondUser: ${user == secondUser}") //Compares user to second user
     //user == secondUser: true
     println("user == thirdUser: ${user == thirdUser}")   //Compares user to third user
     //user == thirdUser: false
+    //sampleEnd
+}
+```
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-data-classes-compare-instances-kotlin"}
 
+### Expose hash code
+
+```kotlin
+data class User(val name: String, val id: Int)
+
+fun main() {
+    //sampleStart
+    val user = User("Alex", 1)
+    val secondUser = User("Alex", 1)
+    val thirdUser = User("Max", 2)
+    
     //hashCode()
     println(user.hashCode())
     //63347075
@@ -169,25 +234,28 @@ fun main() {
     //63347075
     println(thirdUser.hashCode())
     //2390846
-    
-    //copy()
-    println(user.copy())       //Creates an exact copy of user
-    //User(name=Alex, id=1)
-    println(user.copy("Max"))  //Creates a copy of user with name: "Max"
-    //User(name=Max, id=1)
-    println(user.copy(id = 3)) //Creates a copy of user with id: 3
-    //User(name=Alex, id=3)
-    
-    //componentN()
-    println(user.component1()) //Prints first property of user
-    //Alex
-    println(user.component2()) //Prints second property of user
-    //1
+    //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-data-classes-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-data-classes-expose-hash-code-kotlin"}
 
-For the last step of our tour, you will learn about Kotlin's [null safety](kotlin-tour-null-safety.md).
+### Print as string
+
+```kotlin
+data class User(val name: String, val id: Int)
+
+fun main() {
+    val user = User("Alex", 1)
+    
+    //sampleStart
+    println(user)            //Automatically uses toString() function so that output is easy to read
+    //User(name=Alex, id=1)
+    //sampleEnd
+}
+```
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-data-classes-print-string-kotlin"}
+
+The last chapter of the tour is about Kotlin's [null safety](kotlin-tour-null-safety.md).
 
 ## Practice
 
