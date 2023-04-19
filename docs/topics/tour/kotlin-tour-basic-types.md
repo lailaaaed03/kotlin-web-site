@@ -18,20 +18,19 @@ As `Int` is a number data type, you can perform arithmetic operations with `cust
 
 ```kotlin
 fun main() {
-    val popcorn = 5
-    val hotdog = 7
 //sampleStart
     var customers = 10
 
     //Some customers leave the queue
     customers = 8
 
-    customers += 7 //Example of addition: 15
-    customers -= 3 //Example of subtraction: 12
-    customers *= 2 //Example of multiplication: 24
-    customers /= 3 //Example of division: 8
+    customers = customers + 3 //Example of addition: 11
+    customers += 7            //Example of addition: 18
+    customers -= 3            //Example of subtraction: 15
+    customers *= 2            //Example of multiplication: 30
+    customers /= 3            //Example of division: 10
 
-    println(customers) // 8
+    println(customers) // 10
 //sampleEnd
 }
 ```
