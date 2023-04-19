@@ -1106,6 +1106,12 @@
     position:
       lat: 30.4277547
       lng: -9.5981072
+   - name: Marrakesh KUG
+    country: Morocco
+    url: https://www.facebook.com/profile.php?id=100091658063952&is_tour_dismissed=true
+    position:
+      lat: 31.628674
+      lng: 	-7.992047
   - name: Algeria KUG
     country: Algeria
     url: https://web.facebook.com/groups/383147662448461/
